@@ -8,8 +8,8 @@ pipeline {
                
       }
     }
-    stage('Lintint'){
-	stesp {
+    stage("Linting"){
+	steps {
 		sh 'tidy -q -e *.html'
 		}
 	}
