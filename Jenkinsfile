@@ -1,13 +1,17 @@
 pipeline {
   agent any 
   stages {
-    stage("Build") {
+    stage("Install") {
       steps {
-        sh 'echo "Hello World"'
-        sh 'echo "Multiline shell steps works too"'
-        sh 'ls -lah'
+        sh 'echo "Script para instalar o lint"'
+        sh 'sudo apt install tidy'
                
       }
     }
+    stage('Lintint'){
+	stesp {
+		sh 'tidy -q -e *.html'
+		}
+	}
   }
 }
