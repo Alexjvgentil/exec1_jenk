@@ -4,7 +4,6 @@ pipeline {
     stage("Install") {
       steps {
         sh 'echo "Script para instalar o lint"'
-        sh 'sudo apt install tidy'
                
       }
     }
